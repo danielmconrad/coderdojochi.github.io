@@ -1,9 +1,8 @@
 # Site settings
 title: CoderDojoChi GitHub
-tag_text: Solo
-description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: Welcome to CoderDojoChi’s GitHub page. We use GitHub pages extensively for our slides, cheatsheets, and teaching tools.
+baseurl: ""
+url: ""
 email: info@coderdojochi.org
 twitter_username: CoderDojoChi
 github_username:  CoderDojoChi
@@ -12,12 +11,15 @@ facebook_username: CoderDojoChi
 # Build settings
 gems:
   - jekyll-redirect-from
+
 markdown: kramdown
+
 exclude:
   - Gemfile
   - Gemfile.lock
+
 include:
   - _pages
+
 sass:
   style: compressed
-

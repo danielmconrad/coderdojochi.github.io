@@ -11,15 +11,17 @@ Welcome to CoderDojoChi's GitHub page. We use GitHub pages extensively for our s
 
 
 ## Projects
-
-- [Slides Template][slides-template] ([source][slides-template-source])
 - [Timer][timer] ([source][timer-source])
+
+
+## Slides
+- [New Mentor][new-mentor] ([source][new-mentor-source])
+- _[Template][slides-template]_ ([source][slides-template-source])
 
 
 ## Redirects
 - [Pre-survey](/survey/pre/) (/survey/pre/)
 - [Post-survey](/survey/post/) (/survey/post/)
-
 
 
 
@@ -39,3 +41,7 @@ Welcome to CoderDojoChi's GitHub page. We use GitHub pages extensively for our s
 
 [timer]: https://coderdojochi.github.io/timer/
 [timer-source]: https://github.com/coderdojochi/timer/
+
+[new-mentor]: https://coderdojochi.github.io/slides-new-mentor/
+[new-mentor-source]: https://github.com/coderdojochi/slides-new-mentor/
+
