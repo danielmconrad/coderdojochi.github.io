@@ -1,6 +1,7 @@
 ---
 permalink: "/camp/"
 title: "CoderDojoChi Coding Camp"
+excerpt: "CoderDojoChi is excited to announce our 2017 coding summer camp! Campers learn the fundamentals of web technologies to create, code, and produce their own project-based website. Camp ends with a special showcase presentation for family and friends."
 classes:
     - camp
 ---
