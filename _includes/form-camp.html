@@ -1,7 +1,18 @@
 <script>
     var submitted = false;
     function onSubmit(token) {
-        document.getElementById("mG61Hd").submit();
+        var sessions = document.querySelector('.sessions');
+        var numChecked = sessions.querySelectorAll("input[type='checkbox']:checked").length;
+
+        if( numChecked > 0) {
+            // document.getElementById("mG61Hd").submit();
+            window.location = '{{ "/camp-thank-you" | prepend: site.baseurl }}';
+        } else {
+            var msg = "Please check one session.";
+            alert(msg);
+            sessions.querySelector('input').focus()
+        }
+
     }
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -25,28 +36,28 @@
     })
 </script>
 
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='{{ "/camp-thank-you" | prepend: site.baseurl }}';}"></iframe>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){ onSubmit(); }"></iframe>
 
 <form action="https://docs.google.com/a/coderdojochi.org/forms/d/e/1FAIpQLSfb89vnT5Ae6I5AiGVgE2rOPzmQ3yh9kEL8ZwfQvqw8Yq1Sag/formResponse" method="POST" id="mG61Hd" target="hidden_iframe" onsubmit="submitted=true;">
     <label for="guardian-full-name">Guardian Full Name <span class="form-required" aria-hidden="true">*</span></label>
-    <input type="text" id="" name="entry.2092238618" value="" required>
+    <input type="text" id="" name="entry.2092238618" value="" required />
 
     <label for="guardian-email">Guardian Email <span class="form-required" aria-hidden="true">*</span></label>
-    <input type="email" id="guardian-email" name="entry.1556369182" value="" required>
+    <input type="email" id="guardian-email" name="entry.1556369182" value="" required />
 
     <label for="guardian-phone">Guardian Phone <span class="form-required" aria-hidden="true">*</span></label>
-    <input type="tel" id="guardian-phone" name="entry.396149967" value="" required>
+    <input type="tel" id="guardian-phone" name="entry.396149967" value="" required />
 
     <label for="students-full-name">Student's Full Name <span class="form-required" aria-hidden="true">*</span></label>
-    <input type="text" id="students-full-name" name="entry.479301265" value="" required>
+    <input type="text" id="students-full-name" name="entry.479301265" value="" required />
 
     <label for="students-age">Student's Age <span class="form-required" aria-hidden="true">*</span></label>
-    <input type="number" id="students-age" name="entry.1515084250" value="" min="9" max="15" data-error-message="Student's age needs to be bettween 9 and 15." required>
+    <input type="number" id="students-age" name="entry.1515084250" value="" min="9" max="15" data-error-message="Student's age needs to be bettween 9 and 15." required />
 
     <label for="students-gender">Student's Gender <span class="form-required" aria-hidden="true">*</span></label>
-    <input type="text" id="students-gender" name="entry.209594418" value="" required>
+    <input type="text" id="students-gender" name="entry.209594418" value="" required />
 
-    <fieldset>
+    <fieldset class="sessions">
         <legend>Select the session(s) your student would like to attend? <span class="form-required" aria-hidden="true">*</span></legend>
         <div class="input-wrap">
             <input type="checkbox" name="entry.1842124596" id="week1" value="June 26 to June 30" />
@@ -57,15 +68,15 @@
             <label for="week2">July 10 to July 14</label>
         </div>
         <div class="input-wrap">
-            <input type="checkbox" name="entry.1842124596" id="week3" value="July 17 to July 21">
+            <input type="checkbox" name="entry.1842124596" id="week3" value="July 17 to July 21" />
             <label for="week3">July 17 to July 21</label>
         </div>
     </fieldset>
 
 
     <label for="students-dietary-restrictions">Student's Dietary Restrictions <span class="form-required" aria-hidden="true">*</span></label>
-    <select id="students-dietary-restrictions" name="entry.588393791">
-        <option selected disabled>Choose</option>>
+    <select id="students-dietary-restrictions" name="entry.588393791" required>
+        <option value="" selected disabled>Choose</option>>
         <option value="None">None</option>
         <option value="Vegetarian">Vegetarian</option>
         <option value="Vegan">Vegan</option>
@@ -74,8 +85,8 @@
     </select>
 
     <label for="previous-class">Has the student ever attended a CoderDojoChi class before? <span class="form-required" aria-hidden="true">*</span></label>
-    <select id="previous-class" name="entry.26605575">
-        <option selected disabled>Choose</option>>
+    <select id="previous-class" name="entry.26605575" required>
+        <option value="" selected disabled>Choose</option>>
         <option value="Yes">Yes</option>
         <option value="No">No</option>
     </select>
