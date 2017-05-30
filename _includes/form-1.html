@@ -1,0 +1,72 @@
+<script>
+    function onSubmit(token) {
+        document.getElementById("mG61Hd").submit();
+        window.location = "{{ "/camp-submit" | prepend: site.baseurl }}";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var elements = document.getElementsByTagName("INPUT");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].oninvalid = function (e) {
+                e.target.setCustomValidity("");
+                if (!e.target.validity.valid) {
+                    var msg = e.target.getAttribute('data-error-message');
+
+                    if (!msg || msg.length <= 0) {
+                        msg = "This field cannot be left blank";
+                    }
+                    e.target.setCustomValidity(msg);
+                }
+            };
+            elements[i].oninput = function (e) {
+                e.target.setCustomValidity("");
+            };
+        }
+    })
+</script>
+
+<form action="https://docs.google.com/a/coderdojochi.org/forms/d/e/1FAIpQLSfb89vnT5Ae6I5AiGVgE2rOPzmQ3yh9kEL8ZwfQvqw8Yq1Sag/formResponse" target="_self" method="POST" id="mG61Hd">
+    <label for="guardian-full-name">Guardian Full Name <span class="form-required" aria-hidden="true">*</span></label>
+    <input type="text" id="" name="entry.2092238618" value="" required>
+
+    <label for="guardian-email">Guardian Email <span class="form-required" aria-hidden="true">*</span></label>
+    <input type="email" id="guardian-email" name="entry.1556369182" value="" required>
+
+    <label for="guardian-phone">Guardian Phone <span class="form-required" aria-hidden="true">*</span></label>
+    <input type="tel" id="guardian-phone" name="entry.396149967" value="" required>
+
+    <label for="students-full-name">Student's Full Name <span class="form-required" aria-hidden="true">*</span></label>
+    <input type="text" id="students-full-name" name="entry.479301265" value="" required>
+
+    <label for="students-age">Student's Age <span class="form-required" aria-hidden="true">*</span></label>
+    <input type="number" id="students-age" name="entry.1515084250" value="" min="9" max="15" data-error-message="Student's age needs to be bettween 9 and 15." required>
+
+    <label for="students-gender">Student's Gender <span class="form-required" aria-hidden="true">*</span></label>
+    <input type="text" id="students-gender" name="entry.209594418" value="" required>
+
+    <label for="students-dietary-restrictions">Student's Dietary Restrictions <span class="form-required" aria-hidden="true">*</span></label>
+    <select id="students-dietary-restrictions" name="entry.588393791">
+        <option value="None" selected>None</option>
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Vegan">Vegan</option>
+        <option value="Kosher">Kosher</option>
+        <option value="Gluten-free">Gluten-free</option>
+    </select>
+
+    <label for="previous-class">Has the student ever attended a CoderDojoChi class before? <span class="form-required" aria-hidden="true">*</span></label>
+    <select id="previous-class" name="entry.26605575">
+        <option selected disabled>Choose</option>>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+
+    <label for="previous-coding">List any previous coding experience(s), if any, your child may has had. <span class="form-required" aria-hidden="true">*</span></label>
+    <div>Write 'none' if they haven't had any. That is perfectly fine!</div>
+    <textarea id="previous-coding" name="entry.1282379238" required></textarea>
+
+    <label for="comments-or-questions">Any comments or questions?</label>
+    <textarea id="comments-or-questions" name="entry.1883575158"></textarea>
+
+
+    <button class="g-recaptcha" data-sitekey="6LepYyMUAAAAACUF3abwgFZLp9IoBo6XdpLXjgMU" data-callback="YourOnSubmitFn">Submit</button>
+</form>

@@ -1,0 +1,31 @@
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+input,
+textarea,
+select {
+    display: block;
+    // border: 2px solid #EEE;
+    line-height: 1.25;
+    width: 100%;
+}
+
+textarea {
+    height: 3rem;
+}
+
+button {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+}
+
+.form-required {
+    color: red;
+    font-size: 0.83em;
+    vertical-align: super;
+}
+
