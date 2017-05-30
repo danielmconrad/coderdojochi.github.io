@@ -1,26 +1,42 @@
 label {
-    display: block;
-    margin-top: 1rem;
+    // font-weight: bold;
+    // display: block;
+    // margin-top: 1rem;
 }
 
-input,
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
 textarea,
 select {
     display: block;
     // border: 2px solid #EEE;
     line-height: 1.25;
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 textarea {
     height: 3rem;
 }
 
+label + p {
+    font-size: 0.75rem;
+}
+
 button {
     margin-top: 1rem;
     font-size: 1.25rem;
     line-height: 1.25;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 }
 
 .form-required {

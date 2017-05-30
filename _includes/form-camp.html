@@ -1,7 +1,7 @@
 <script>
+    var submitted = false;
     function onSubmit(token) {
         document.getElementById("mG61Hd").submit();
-        window.location = "{{ "/camp-submit" | prepend: site.baseurl }}";
     }
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -25,7 +25,9 @@
     })
 </script>
 
-<form action="https://docs.google.com/a/coderdojochi.org/forms/d/e/1FAIpQLSfb89vnT5Ae6I5AiGVgE2rOPzmQ3yh9kEL8ZwfQvqw8Yq1Sag/formResponse" target="_self" method="POST" id="mG61Hd">
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='{{ "/camp-thank-you" | prepend: site.baseurl }}';}"></iframe>
+
+<form action="https://docs.google.com/a/coderdojochi.org/forms/d/e/1FAIpQLSfb89vnT5Ae6I5AiGVgE2rOPzmQ3yh9kEL8ZwfQvqw8Yq1Sag/formResponse" method="POST" id="mG61Hd" target="hidden_iframe" onsubmit="submitted=true;">
     <label for="guardian-full-name">Guardian Full Name <span class="form-required" aria-hidden="true">*</span></label>
     <input type="text" id="" name="entry.2092238618" value="" required>
 
@@ -44,9 +46,27 @@
     <label for="students-gender">Student's Gender <span class="form-required" aria-hidden="true">*</span></label>
     <input type="text" id="students-gender" name="entry.209594418" value="" required>
 
+    <fieldset>
+        <legend>Select the session(s) your student would like to attend? <span class="form-required" aria-hidden="true">*</span></legend>
+        <div class="input-wrap">
+            <input type="checkbox" name="entry.1842124596" id="week1" value="June 26 to June 30" />
+            <label for="week1">June 26 to June 30</label>
+        </div>
+        <div class="input-wrap">
+            <input type="checkbox" name="entry.1842124596" id="week2" value="July 10 to July 14" />
+            <label for="week2">July 10 to July 14</label>
+        </div>
+        <div class="input-wrap">
+            <input type="checkbox" name="entry.1842124596" id="week3" value="July 17 to July 21">
+            <label for="week3">July 17 to July 21</label>
+        </div>
+    </fieldset>
+
+
     <label for="students-dietary-restrictions">Student's Dietary Restrictions <span class="form-required" aria-hidden="true">*</span></label>
     <select id="students-dietary-restrictions" name="entry.588393791">
-        <option value="None" selected>None</option>
+        <option selected disabled>Choose</option>>
+        <option value="None">None</option>
         <option value="Vegetarian">Vegetarian</option>
         <option value="Vegan">Vegan</option>
         <option value="Kosher">Kosher</option>
@@ -60,13 +80,13 @@
         <option value="No">No</option>
     </select>
 
-    <label for="previous-coding">List any previous coding experience(s), if any, your child may has had. <span class="form-required" aria-hidden="true">*</span></label>
-    <div>Write 'none' if they haven't had any. That is perfectly fine!</div>
+    <label for="previous-coding">List any previous coding experience(s) your child has had. <span class="form-required" aria-hidden="true">*</span></label>
+    <p>Write 'none' if they haven't had any. That is perfectly fine!</p>
     <textarea id="previous-coding" name="entry.1282379238" required></textarea>
 
-    <label for="comments-or-questions">Any comments or questions?</label>
+    <label for="comments-or-questions">Anything else we should know about your student?</label>
     <textarea id="comments-or-questions" name="entry.1883575158"></textarea>
 
 
-    <button class="g-recaptcha" data-sitekey="6LepYyMUAAAAACUF3abwgFZLp9IoBo6XdpLXjgMU" data-callback="YourOnSubmitFn">Submit</button>
+    <button class="g-recaptcha" data-sitekey="6LepYyMUAAAAACUF3abwgFZLp9IoBo6XdpLXjgMU" data-callback="onSubmit">Reserve my spot</button>
 </form>
