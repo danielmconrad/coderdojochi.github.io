@@ -9,9 +9,6 @@ og:
     description: "CoderDojoChi is excited to announce our 2017 coding summer camp! Campers learn the fundamentals of web technologies to create, code, and produce their own project-based website. Camp ends with a special showcase presentation for family and friends."
     url: "http://coderdojochi.com/camp/"
     image: "http://coderdojochi.com/assets/camp/1.jpg"
-    tags:
-        - coding
-        - camp
 ---
 
 # CoderDojoChi Coding Camp
