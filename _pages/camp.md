@@ -1,5 +1,6 @@
 ---
 permalink: "/camp/"
+title: "CoderDojoChi Coding Camp"
 classes:
     - camp
 ---
