@@ -57,8 +57,6 @@ Tuition includes all camp workshops, lunch each day, and any equipment needed. $
 
 Spots are filling up quickly. Fill out the form below to reserve your spot today. You will be contacted for payment once your form is received.
 
-
-{% include form-camp.html %}
-
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfb89vnT5Ae6I5AiGVgE2rOPzmQ3yh9kEL8ZwfQvqw8Yq1Sag/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
 
