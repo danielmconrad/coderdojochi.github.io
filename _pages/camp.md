@@ -32,7 +32,7 @@ Every session provides students with an opportunity to take a hands-on approach 
 
 CoderDojoChi is offering **three week-long camp sessions**. The dates for each session are:
 
-1. Monday, June 26 to Friday, June 30 from 9am to 2pm
+1. ~~Monday, June 26 to Friday, June 30 from 9am to 2pm~~
 1. Monday, July 10 to Friday, July 14 from 9am to 2pm
 1. Monday, July 17 to Friday, July 21 from 9am to 2pm
 
