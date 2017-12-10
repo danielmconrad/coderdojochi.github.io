@@ -4,5 +4,5 @@ redirect_from:
   - "/pre/"
   - "/pre-survey/"
 redirect_to:
-  - "https://docs.google.com/forms/d/e/1FAIpQLScFK4hNMhs4MhvIglczo-RGqWWQiCNW-Ju1cgkfLP6w8wfT3A/viewform"
+  - "https://docs.google.com/forms/d/e/1FAIpQLSeKQ4jfAB1N9OsGNfTy-HMzclBR_6N0bzRX_rTA9Pe2TWM9Vg/viewform""
 ---
